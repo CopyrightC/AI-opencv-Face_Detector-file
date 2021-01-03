@@ -7,7 +7,11 @@ window_msg.withdraw()
 faceCascade=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 webcam_cap = cv2.VideoCapture(0)
 messagebox.showinfo("Guide","Welcome to the Face Detector app, to quit the programme at any instance press 'Spacebar'")
-
+'''
+If you get the error (-215:Assertion failed) !empty() in function 'cv::CascadeClassifier::detectMultiScale' then check if the .xml file is in the 
+same path as of the source code. If you get the error even if the file is in the same path then this error simply means that the .xml file is
+corrupted
+'''
 while True:
 
     boolxval, frame = webcam_cap.read()
